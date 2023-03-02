@@ -34,14 +34,7 @@ body{
 .pacman::after{
     animation: eat2 linear 1s infinite;
 }
-.pacman div:nth-child(1),
- .pacman div:nth-child(2),
- .pacman div:nth-child(3),
- .pacman div:nth-child(4),
- .pacman div:nth-child(5),
- .pacman div:nth-child(6),
- .pacman div:nth-child(7),
- .pacman div:nth-child(8){
+.pacman div{
     background-color: #fff;
     border-radius: 50%;
     width: 10px;
