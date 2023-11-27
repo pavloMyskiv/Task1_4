@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 500px;
+    min-height: 100vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-color: #333;    
+}
+.pacman{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.pacman::after, .pacman::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 25px solid #ffd000;
+    border-radius: 50%;
+    border-right: 25px solid transparent;
+    animation: eat1 linear 1s infinite;
+}
+.pacman::after{
+    animation: eat2 linear 1s infinite;
+}
+.pacman div{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -400px;
+    opacity: 0;
+}
+.pacman div:nth-child(1){
+    animation: move linear 8s -0.5s infinite;
+}
+.pacman div:nth-child(2){
+    animation: move linear 8s -1.5s infinite;
+}
+.pacman div:nth-child(3){
+    animation: move linear 8s -2.5s infinite;
+}
+.pacman div:nth-child(4){
+    animation: move linear 8s -3.5s infinite;
+}
+.pacman div:nth-child(5){
+    animation: move linear 8s -4.5s infinite;
+}
+.pacman div:nth-child(6){
+    animation: move linear 8s -5.5s infinite;
+}
+.pacman div:nth-child(7){
+    animation: move linear 8s -6.5s infinite;
+}
+.pacman div:nth-child(8){
+    animation: move linear 8s -7.5s infinite;
+}
+
+@keyframes eat1{
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(45deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes eat2{
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-45deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes move{
+    20%, 98%{opacity: 1;}
+    100%{translate: -410px ;}
+}
